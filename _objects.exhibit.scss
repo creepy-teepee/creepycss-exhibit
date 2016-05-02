@@ -1,0 +1,120 @@
+// #EXHIBIT
+// 
+// Stacked media-with-text object.
+// A simple abstraction to cover a very common design pattern.
+
+$creepy-exhibit-gutter:         $creepy-base-spacing-unit !default;
+$creepy-exhibit-gutter--tiny:   quarter($creepy-exhibit-gutter) !default;
+$creepy-exhibit-gutter--small:  halve($creepy-exhibit-gutter) !default;
+$creepy-exhibit-gutter--large:  double($creepy-exhibit-gutter) !default;
+$creepy-exhibit-gutter--huge:   quadruple($creepy-exhibit-gutter) !default;
+
+$creepy-enable-exhibit--flush:  false !default;
+$creepy-enable-exhibit--tiny:   false !default;
+$creepy-enable-exhibit--small:  false !default;
+$creepy-enable-exhibit--large:  false !default;
+$creepy-enable-exhibit--huge:   false !default;
+
+$creepy-enable-exhibit--center: false !default;
+$creepy-enable-exhibit--right:  false !default;
+
+
+
+
+
+/**
+ *    
+ */
+.o-exhibit,
+%o-exhibit {
+	
+	display: block;
+
+	// Media.
+	// 1. Eliminate whitespace around images.
+	&__media {
+		margin-bottom: $creepy-exhibit-gutter;
+		vertical-align: middle; // [1]
+	}
+
+	// Text-content.
+	&__body {
+		display: block;
+	}
+
+
+
+
+
+	@if ($creepy-enable-exhibit--flush == true) {
+		// No space between the image and the text content.
+		&--flush &__media {
+			margin-bottom: 0;
+		}
+	}
+
+
+
+
+
+	@if ($creepy-enable-exhibit--tiny == true) {
+		// Tiny space between the image and the text content.
+		&--tiny &__media {
+			margin-bottom: $creepy-exhibit-gutter--tiny;
+		}
+	}
+
+
+
+
+
+	@if ($creepy-enable-exhibit--small == true) {
+		// Small space between the image and the text content.
+		&--tiny &__media {
+			margin-bottom: $creepy-exhibit-gutter--small;
+		}
+	}
+
+
+
+
+
+	@if ($creepy-enable-exhibit--large == true) {
+		// Large space between the image and the text content.
+		&--large &__media {
+			margin-bottom: $creepy-exhibit-gutter--large;
+		}
+	}
+
+
+
+
+
+	@if ($creepy-enable-exhibit--huge == true) {
+		// Huge space between the image and the text content.
+		&__huge &__media
+			margin-bottom: $creepy-exhibit-gutter--huge;
+		}
+	}
+
+
+
+
+
+	@if ($creepy-enable-exhibit--center == true) {
+		&--center {
+			text-align: center;
+		}
+	}
+
+
+
+
+
+	@if ($creepy-enable-exhibit--right == true) {
+		&--right {
+			text-align: right;
+		}
+	}	
+
+}
