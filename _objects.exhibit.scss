@@ -89,7 +89,7 @@ $creepy-enable-exhibit--right:  false !default;
 
 	@if ($creepy-enable-exhibit--huge == true) {
 		// Huge space between the image and the text content.
-		&__huge &__media
+		&__huge &__media {
 			margin-bottom: $creepy-exhibit-gutter--huge;
 		}
 	}
