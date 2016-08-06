@@ -1,0 +1,25 @@
+{
+  "name": "creepycss-exhibit",
+  "authors": [
+    "James Howard <james@reetgood.co.uk>",
+    "Jon Hurrell"
+  ],
+  "description": "The exhibit object displays media above descriptive content.",
+  "main": "_objects.exhibit.scss",
+  "moduleType": [],
+  "keywords": [
+    "oocss",
+    "css",
+    "exhibit",
+    "media"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
