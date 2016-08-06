@@ -1,7 +1,8 @@
 {
   "name": "creepycss-exhibit",
   "authors": [
-    "James Howard <james@reetgood.co.uk>"
+    "James Howard <james@reetgood.co.uk>",
+    "Jon Hurrell"
   ],
   "description": "The exhibit object displays media above descriptive content.",
   "main": "_objects.exhibit.scss",
